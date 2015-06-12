@@ -10,27 +10,27 @@
 
 @implementation NoteSvcCache
 
-NSMutableArray *notes = nil;
+NSMutableArray *notesArray = nil;
 
 - (id) init {
     if (self = [super init]) {
-        notes = [NSMutableArray array];
+        notesArray = [NSMutableArray array];
         return self;
     }
     return nil;
 }
 
 - (Note *) addNote: (Note *) note {
-    [notes addObject: note];
+    [notesArray addObject: note];
     return note;
 }
 
 - (NSMutableArray *) retrieveAllNotes {
-    return notes;
+    return notesArray;
 }
 
 - (Note *) deleteNote: (Note *) note {
-    [notes removeObject: note];
+    [notesArray removeObject: note];
     return note;
 }
 

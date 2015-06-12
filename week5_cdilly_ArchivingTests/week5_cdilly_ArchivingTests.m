@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-
-@interface week5_cdilly_ArchivingTests : XCTestCase
-
-@end
+#import "week5_cdilly_ArchivingTests.h"
+#import "Note.h"    
+#import "NoteSvcArchive.h"
 
 @implementation week5_cdilly_ArchivingTests
+
+static NSString *const TESTNOTETEXT = @"This is some note!";
 
 - (void)setUp {
     [super setUp];
@@ -25,9 +26,19 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testNoteSvcArchive {
+    NSLog(@"*** Starting testNoteSvcArchive ***");
+    NoteSvcArchive *noteSvc = [[NoteSvcArchive alloc] init];
+    int initialCount = [[noteSvc retrieveAllNotes] count];
+    
+    Note *note = [[Note alloc] init];
+    note.noteText = TESTNOTETEXT;
+    
+    [noteSvc addNote:(Note *) note];
+    int finalCount = [[noteSvc retrieveAllNotes] count];
+    
+    NSLog(@"*** The count: %i", count);
+    NSLog(@"*** Ending testNoteSvcArchive ***");
 }
 
 - (void)testPerformanceExample {

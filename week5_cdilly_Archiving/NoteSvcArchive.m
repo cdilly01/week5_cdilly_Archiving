@@ -10,27 +10,41 @@
 
 @implementation NoteSvcArchive
 
-NSMutableArray *notes = nil;
+NSString *filePath;
+NSMutableArray *notes;
 
 - (id) init {
-    if (self = [super init]) {
-        notes = [NSMutableArray array];
-        return self;
-    }
-    return nil;
+    NSArray *dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsDir = [dirPaths objectAtIndex:0];
+    
+    filePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"notes.archive"]];
+    
+    [self readArchive];
+    return self;
 }
 
 -(void) readArchive {
-    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    if ([filemgr fileExistsAtPath: filePath])
+    {
+        notes = [NSKeyedUnarchiver unarchiveObjectWithFile: filePath];
+    }
+    else
+    {
+        notes = [NSMutableArray array];
+    }
 }
 
 -(void) writeArchive {
-
+    [NSKeyedArchiver archiveRootObject: notes toFile: filePath];
 }
 
-
 - (Note *) addNote: (Note *) note {
+    NSLog(@"NoteSvc.addNote: %@", [note description]);
+    
     [notes addObject: note];
+    [self writeArchive];
+    
     return note;
 }
 
@@ -39,7 +53,9 @@ NSMutableArray *notes = nil;
 }
 
 - (Note *) deleteNote: (Note *) note {
+    NSLog(@"NoteSvc.deleteNote: %@", [note description]);
     [notes removeObject: note];
+    
     return note;
 }
 

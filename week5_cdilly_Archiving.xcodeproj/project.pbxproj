@@ -51,6 +51,7 @@
 		E7A567321B2AA1FE009C57AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E7A567341B2AA936009C57AA /* NoteSvcArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteSvcArchive.h; sourceTree = "<group>"; };
 		E7A567351B2AA936009C57AA /* NoteSvcArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcArchive.m; sourceTree = "<group>"; };
+		E7A567371B2AAF3F009C57AA /* week5_cdilly_ArchivingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = week5_cdilly_ArchivingTests.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 			children = (
 				E7A5671D1B2A9B15009C57AA /* week5_cdilly_ArchivingTests.m */,
 				E7A5671B1B2A9B15009C57AA /* Supporting Files */,
+				E7A567371B2AAF3F009C57AA /* week5_cdilly_ArchivingTests.h */,
 			);
 			path = week5_cdilly_ArchivingTests;
 			sourceTree = "<group>";
