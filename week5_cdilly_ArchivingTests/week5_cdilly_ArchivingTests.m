@@ -37,7 +37,8 @@ static NSString *const TESTNOTETEXT = @"This is some note!";
     [noteSvc addNote:(Note *) note];
     int finalCount = [[noteSvc retrieveAllNotes] count];
     
-    NSLog(@"*** The count: %i", count);
+    NSLog(@"*** The initial count: %i", initialCount );
+    NSLog(@"*** The final count: %i", finalCount );
     NSLog(@"*** Ending testNoteSvcArchive ***");
 }
 
