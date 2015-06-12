@@ -1,5 +1,5 @@
 //
-//  Note.h
+//  NoteSvcArchive.h
 //  week5_cdilly_Archiving
 //
 //  Created by A Student on 6/11/15.
@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NoteSvc.h"
 
-@interface Note : NSObject <NSCoding>
-
-@property (nonatomic) NSInteger id;
-@property (nonatomic, strong) NSString *noteText;
+@interface NoteSvcArchive : NSObject <NoteSvc>
 
 @end
