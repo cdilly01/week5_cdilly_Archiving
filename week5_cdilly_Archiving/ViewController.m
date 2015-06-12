@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "Note.h"
-#import "NoteSvcCache.h"
+//#import "NoteSvcCache.h"
+#import "NoteSvcArchive.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,13 @@
 
 @implementation ViewController
 
-NoteSvcCache *noteSvcCache = nil;
+//NoteSvcCache *noteSvcCache = nil;
+NoteSvcArchive *noteSvcArchive = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    noteSvcCache = [[NoteSvcCache alloc] init];
+    noteSvcArchive = [[NoteSvcArchive alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +39,7 @@ NoteSvcCache *noteSvcCache = nil;
     Note *note = [[Note alloc] init];
     note.noteText = _noteInputText.text;
     
-    [noteSvcCache addNote:note];
+    [noteSvcArchive addNote:note];
     
     [self.tableView reloadData];
     NSLog(@"saveNote: note saved");
@@ -51,7 +53,7 @@ NoteSvcCache *noteSvcCache = nil;
     Note *note = [[Note alloc] init];
     note.noteText = _noteInputText.text;
     
-    [noteSvcCache deleteNote:note];
+    [noteSvcArchive deleteNote:note];
     
     [self.tableView reloadData];
     NSLog(@"deleteNote: note deleted");
@@ -61,7 +63,7 @@ NoteSvcCache *noteSvcCache = nil;
 // Return the number of notes
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[noteSvcCache retrieveAllNotes] count];
+    return [[noteSvcArchive retrieveAllNotes] count];
 }
 
 // Return the table cell for a paricular row (index)
@@ -76,7 +78,7 @@ NoteSvcCache *noteSvcCache = nil;
                                       reuseIdentifier:simpleTableIdentifier];
     }
     
-    Note *note = [[noteSvcCache retrieveAllNotes]
+    Note *note = [[noteSvcArchive retrieveAllNotes]
                   objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [note description];
