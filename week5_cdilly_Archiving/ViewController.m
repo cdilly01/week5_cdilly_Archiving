@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Note.h"
-//#import "NoteSvcCache.h"
 #import "NoteSvcArchive.h"
 
 @interface ViewController ()
@@ -17,7 +16,6 @@
 
 @implementation ViewController
 
-//NoteSvcCache *noteSvcCache = nil;
 NoteSvcArchive *noteSvcArchive = nil;
 
 - (void)viewDidLoad {
