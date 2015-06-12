@@ -1,0 +1,18 @@
+//
+//  SecondViewController.h
+//  week5_cdilly_Archiving
+//
+//  Created by A Student on 6/11/15.
+//  Copyright (c) 2015 msse650. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class ViewController;
+
+@interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *secondTableView;
+
+
+@end
