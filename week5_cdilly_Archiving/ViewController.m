@@ -49,7 +49,7 @@ NoteSvcSQLite *noteSvcSQLite = nil;
         NSLog(@"saveNote: note saved");
     }
     else{
-            NSLog(@"empty note, will not add");
+        NSLog(@"empty note, will not add");
     }
 }
 
