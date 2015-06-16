@@ -52,7 +52,25 @@ sqlite3 *database= nil;
 }
 
 -(Note *) deleteNote: (Note *) note{
+    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", note.id];
+    sqlite3_stmt *statement;
+    
+    if (sqlite3_prepare_v2(database, [deleteSQL UTF8String], -1, &statement, NULL)==SQLITE_OK) {
+        if (sqlite3_step(statement) == SQLITE_DONE) {
+            NSLog(@"*** Note Deleted");
+        }
+        else {
+            NSLog(@"*** Note NOT Deleted");
+            NSLog(@"*** SQL error: %s\n", sqlite3_errmsg(database));
+        }
+        sqlite3_finalize(statement);
+    }
+    
     return note;
+}
+
+-(void)dealloc{
+    sqlite3_close(database);
 }
 
 -(NSMutableArray *) retrieveAllNotes{
