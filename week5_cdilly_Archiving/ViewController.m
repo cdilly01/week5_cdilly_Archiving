@@ -35,6 +35,7 @@ NoteSvcSQLite *noteSvcSQLite = nil;
 // Save Note
 - (IBAction)addNote:(id)sender {
     [self.view endEditing:YES];
+    NSLog(@"addNote");
     
     // instantiate new note with sender note
     Note *note = [[Note alloc] init];
@@ -48,6 +49,7 @@ NoteSvcSQLite *noteSvcSQLite = nil;
 
 // Delete Note
 - (IBAction)deleteNote:(id)sender {
+    [self.view endEditing:YES];
     NSLog(@"deleteNote");
     
     // instantiate new note with sender note
@@ -62,8 +64,7 @@ NoteSvcSQLite *noteSvcSQLite = nil;
 
 
 // Return the number of notes
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[noteSvcSQLite retrieveAllNotes] count];
 }
 
