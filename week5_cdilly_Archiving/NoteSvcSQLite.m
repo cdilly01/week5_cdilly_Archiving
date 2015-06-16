@@ -52,7 +52,7 @@ sqlite3 *database= nil;
 }
 
 -(Note *) deleteNote: (Note *) note{
-    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", note.id];
+    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", (int)note.id];
     sqlite3_stmt *statement;
     
     if (sqlite3_prepare_v2(database, [deleteSQL UTF8String], -1, &statement, NULL)==SQLITE_OK) {
