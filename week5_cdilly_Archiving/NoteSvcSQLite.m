@@ -66,7 +66,7 @@ sqlite3 *database= nil;
 }
 
 -(Note *) deleteNote: (Note *) note{
-    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", (int)note.id];
+    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", note.id];
     sqlite3_stmt *statement;
     
     if (sqlite3_prepare_v2(database, [deleteSQL UTF8String], -1, &statement, NULL)==SQLITE_OK) {
@@ -84,7 +84,7 @@ sqlite3 *database= nil;
 }
 
 -(void)dealloc{
-    sqlite3_close(database);
+    //sqlite3_close(database); // this is causing an error when switching views. 
 }
 
 -(NSMutableArray *) retrieveAllNotes{
