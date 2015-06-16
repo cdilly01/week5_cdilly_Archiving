@@ -16,4 +16,5 @@
 
 - (NSInteger)tableView:(UITableView *)secondTableView
  numberOfRowsInSection:(NSInteger)section;
+
 @end
