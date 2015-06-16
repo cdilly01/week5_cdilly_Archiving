@@ -56,7 +56,29 @@ sqlite3 *database= nil;
 }
 
 -(NSMutableArray *) retrieveAllNotes{
-    return nil;
+    NSMutableArray *notes = [NSMutableArray array];
+    NSString *selectSQL = [NSString stringWithFormat:@"SELECT * FROM note ORDER BY noteText"];
+    sqlite3_stmt *statement;
+    
+    if (sqlite3_prepare_v2(database, [selectSQL UTF8String], -1, &statement, NULL) == SQLITE_OK) {
+        NSLog(@"*** Notes retrieved");
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            int id = sqlite3_column_int(statement, 0);
+            char *noteTextChars = (char *)sqlite3_column_text(statement, 1);
+            
+            Note *note = [[Note alloc] init];
+            note.id = id;
+            note.noteText = [[NSString alloc] initWithUTF8String:noteTextChars];
+            [notes addObject:note];
+        }
+        sqlite3_finalize(statement);
+    }
+    else{
+        NSLog(@"*** Notes NOT retrieved");
+        NSLog(@"*** SQL error: %s\n", sqlite3_errmsg(database));
+    }
+    
+    return notes;
 }
 
 
