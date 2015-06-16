@@ -14,23 +14,6 @@
 NSString *databasePath = nil;
 sqlite3 *database= nil;
 
-- (void)initializeDatabase {
-    if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-        NSLog(@"database is open");
-        NSLog(@"database file path: %@", databasePath);
-        
-        NSString *createSql = @"create table if not exists note (id integer primary key autoincrement, noteText varchar(255))";
-        
-        char *errMsg;
-        if (sqlite3_exec(database, [createSql UTF8String], NULL, NULL, &errMsg) != SQLITE_OK) {
-            NSLog(@"Failed to create table %s", errMsg);
-        }
-    }
-    else{
-        NSLog(@"*** Failed to open database!");
-        NSLog(@"*** SQL error: %s\n", sqlite3_errmsg(database));
-    }
-}
 
 // sqlite implementation
 -(id)init{
@@ -40,7 +23,21 @@ sqlite3 *database= nil;
         NSString *documentsDir = [documentPaths objectAtIndex:0];
         databasePath = [documentsDir stringByAppendingPathComponent:@"note.sqlite3"];
         
-        [self initializeDatabase];
+        if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+            NSLog(@"database is open");
+            NSLog(@"database file path: %@", databasePath);
+            
+            NSString *createSql = @"create table if not exists note (id integer primary key autoincrement, noteText varchar(255))";
+            
+            char *errMsg;
+            if (sqlite3_exec(database, [createSql UTF8String], NULL, NULL, &errMsg) != SQLITE_OK) {
+                NSLog(@"Failed to create table %s", errMsg);
+            }
+        }
+        else{
+            NSLog(@"*** Failed to open database!");
+            NSLog(@"*** SQL error: %s\n", sqlite3_errmsg(database));
+        }
     }
     return self;
 }
@@ -48,9 +45,7 @@ sqlite3 *database= nil;
 -(Note *) addNote: (Note *) note{
     sqlite3_stmt *statement;
     NSString *insertSQL = [NSString stringWithFormat:@"INSERT INTO note (noteText) VALUES (\"%@\")", note.noteText];
-    
-    [self initializeDatabase];
-    
+
     if (sqlite3_prepare_v2(database, [insertSQL UTF8String], -1, &statement, NULL)==SQLITE_OK) {
         if (sqlite3_step(statement) == SQLITE_DONE){
             note.id = sqlite3_last_insert_rowid(database);
@@ -66,7 +61,7 @@ sqlite3 *database= nil;
 }
 
 -(Note *) deleteNote: (Note *) note{
-    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", note.id];
+    NSString *deleteSQL = [NSString stringWithFormat:@"DELETE FROM note WHERE id = %i ", (int)note.id];
     sqlite3_stmt *statement;
     
     if (sqlite3_prepare_v2(database, [deleteSQL UTF8String], -1, &statement, NULL)==SQLITE_OK) {
@@ -84,12 +79,12 @@ sqlite3 *database= nil;
 }
 
 -(void)dealloc{
-    //sqlite3_close(database); // this is causing an error when switching views. 
+    //sqlite3_close(database); // this is causing an error when switching views.
 }
 
 -(NSMutableArray *) retrieveAllNotes{
     NSMutableArray *notes = [NSMutableArray array];
-    NSString *selectSQL = [NSString stringWithFormat:@"SELECT * FROM note ORDER BY noteText"];
+    NSString *selectSQL = [NSString stringWithFormat:@"SELECT * FROM note ORDER BY id"];
     sqlite3_stmt *statement;
     
     if (sqlite3_prepare_v2(database, [selectSQL UTF8String], -1, &statement, NULL) == SQLITE_OK) {
@@ -112,7 +107,6 @@ sqlite3 *database= nil;
     
     return notes;
 }
-
 
 
 @end

@@ -35,16 +35,22 @@ NoteSvcSQLite *noteSvcSQLite = nil;
 // Save Note
 - (IBAction)addNote:(id)sender {
     [self.view endEditing:YES];
-    NSLog(@"addNote");
     
-    // instantiate new note with sender note
-    Note *note = [[Note alloc] init];
-    note.noteText = _noteInputText.text;
+    if (_noteInputText.text.length != 0){
+        NSLog(@"addNote");
+        
+        // instantiate new note with sender note
+        Note *note = [[Note alloc] init];
+        note.noteText = _noteInputText.text;
     
-    [noteSvcSQLite addNote:note];
+        [noteSvcSQLite addNote:note];
     
-    [self.tableView reloadData];
-    NSLog(@"saveNote: note saved");
+        [self.tableView reloadData];
+        NSLog(@"saveNote: note saved");
+    }
+    else{
+            NSLog(@"empty note, will not add");
+    }
 }
 
 // Delete Note
