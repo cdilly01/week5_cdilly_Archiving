@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SQLiteTests : NSObject
+@interface SQLiteTests : XCTestCase
 
 @end
