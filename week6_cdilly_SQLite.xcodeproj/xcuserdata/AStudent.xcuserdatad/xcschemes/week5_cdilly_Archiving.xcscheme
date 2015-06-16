@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-               BuildableName = "week5_cdilly_Archiving.app"
-               BlueprintName = "week5_cdilly_Archiving"
-               ReferencedContainer = "container:week5_cdilly_Archiving.xcodeproj">
+               BuildableName = "week6_cdilly_SQLite.app"
+               BlueprintName = "week6_cdilly_SQLite"
+               ReferencedContainer = "container:week6_cdilly_SQLite.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7A567161B2A9B15009C57AA"
-               BuildableName = "week5_cdilly_ArchivingTests.xctest"
-               BlueprintName = "week5_cdilly_ArchivingTests"
-               ReferencedContainer = "container:week5_cdilly_Archiving.xcodeproj">
+               BuildableName = "week6_cdilly_SQLiteTests.xctest"
+               BlueprintName = "week6_cdilly_SQLiteTests"
+               ReferencedContainer = "container:week6_cdilly_SQLite.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7A567161B2A9B15009C57AA"
-               BuildableName = "week5_cdilly_ArchivingTests.xctest"
-               BlueprintName = "week5_cdilly_ArchivingTests"
-               ReferencedContainer = "container:week5_cdilly_Archiving.xcodeproj">
+               BuildableName = "week6_cdilly_SQLiteTests.xctest"
+               BlueprintName = "week6_cdilly_SQLiteTests"
+               ReferencedContainer = "container:week6_cdilly_SQLite.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-            BuildableName = "week5_cdilly_Archiving.app"
-            BlueprintName = "week5_cdilly_Archiving"
-            ReferencedContainer = "container:week5_cdilly_Archiving.xcodeproj">
+            BuildableName = "week6_cdilly_SQLite.app"
+            BlueprintName = "week6_cdilly_SQLite"
+            ReferencedContainer = "container:week6_cdilly_SQLite.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-            BuildableName = "week5_cdilly_Archiving.app"
-            BlueprintName = "week5_cdilly_Archiving"
-            ReferencedContainer = "container:week5_cdilly_Archiving.xcodeproj">
+            BuildableName = "week6_cdilly_SQLite.app"
+            BlueprintName = "week6_cdilly_SQLite"
+            ReferencedContainer = "container:week6_cdilly_SQLite.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-            BuildableName = "week5_cdilly_Archiving.app"
-            BlueprintName = "week5_cdilly_Archiving"
-            ReferencedContainer = "container:week5_cdilly_Archiving.xcodeproj">
+            BuildableName = "week6_cdilly_SQLite.app"
+            BlueprintName = "week6_cdilly_SQLite"
+            ReferencedContainer = "container:week6_cdilly_SQLite.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
