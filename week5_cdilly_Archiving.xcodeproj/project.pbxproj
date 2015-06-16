@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E7335D6F1B2FEDF1006C1143 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */; };
 		E7335D721B2FEEEC006C1143 /* NoteSvcSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */; };
+		E7335D751B307C83006C1143 /* SQLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7335D741B307C83006C1143 /* SQLiteTests.m */; };
 		E7A567041B2A9B14009C57AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567031B2A9B14009C57AA /* main.m */; };
 		E7A567071B2A9B14009C57AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567061B2A9B14009C57AA /* AppDelegate.m */; };
 		E7A5670A1B2A9B14009C57AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567091B2A9B14009C57AA /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E7335D701B2FEEEC006C1143 /* NoteSvcSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteSvcSQLite.h; sourceTree = "<group>"; };
 		E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcSQLite.m; sourceTree = "<group>"; };
+		E7335D731B307C83006C1143 /* SQLiteTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteTests.h; sourceTree = "<group>"; };
+		E7335D741B307C83006C1143 /* SQLiteTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteTests.m; sourceTree = "<group>"; };
 		E7A566FE1B2A9B14009C57AA /* week5_cdilly_Archiving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week5_cdilly_Archiving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A567021B2A9B14009C57AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A567031B2A9B14009C57AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				E7A5671D1B2A9B15009C57AA /* week5_cdilly_ArchivingTests.m */,
 				E7A5671B1B2A9B15009C57AA /* Supporting Files */,
 				E7A567371B2AAF3F009C57AA /* week5_cdilly_ArchivingTests.h */,
+				E7335D731B307C83006C1143 /* SQLiteTests.h */,
+				E7335D741B307C83006C1143 /* SQLiteTests.m */,
 			);
 			path = week5_cdilly_ArchivingTests;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A5671E1B2A9B15009C57AA /* week5_cdilly_ArchivingTests.m in Sources */,
+				E7335D751B307C83006C1143 /* SQLiteTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
