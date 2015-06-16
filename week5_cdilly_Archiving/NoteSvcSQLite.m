@@ -17,6 +17,7 @@ sqlite3 *database= nil;
 // sqlite implementation
 -(id)init{
     if((self = [super init])){
+        
         NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDir = [documentPaths objectAtIndex:0];
         databasePath = [documentsDir stringByAppendingPathComponent:@"note.sqlite3"];
@@ -24,6 +25,13 @@ sqlite3 *database= nil;
         if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
             NSLog(@"database is open");
             NSLog(@"database file path: %@", databasePath);
+            
+            NSString *createSql = @"create table if not exists note (id integer primary key autoincrement, noteText varchar(255))";
+            
+            char *errMsg;
+            if (sqlite3_exec(database, [createSql UTF8String], NULL, NULL, &errMsg) != SQLITE_OK) {
+                NSLog(@"Failed to create table %s", errMsg);
+            }
         }
         else{
             NSLog(@"*** Failed to open database!");
