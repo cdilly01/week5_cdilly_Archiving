@@ -1,6 +1,6 @@
 //
-//  week5_cdilly_ArchivingTests.m
-//  week5_cdilly_ArchivingTests
+//  week6_cdilly_ArchivingTests.m
+//  week6_cdilly_ArchivingTests
 //
 //  Created by A Student on 6/11/15.
 //  Copyright (c) 2015 msse650. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "week5_cdilly_ArchivingTests.h"
+#import "ArchivingTests.h"
 #import "Note.h"    
 #import "NoteSvcArchive.h"
 
-@implementation week5_cdilly_ArchivingTests
+@implementation ArchivingTests
 
 static NSString *const TESTNOTETEXT = @"This is some note!";
 
