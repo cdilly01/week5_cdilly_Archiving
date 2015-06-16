@@ -12,7 +12,7 @@
 
 @interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *secondTableView;
+@property (weak, nonatomic) IBOutlet UITableView *secondTableView; 
 
 - (NSInteger)tableView:(UITableView *)secondTableView
  numberOfRowsInSection:(NSInteger)section;
