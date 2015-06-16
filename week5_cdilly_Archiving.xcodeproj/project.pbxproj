@@ -85,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */,
-				E7A567001B2A9B14009C57AA /* week5_cdilly_Archiving */,
-				E7A5671A1B2A9B15009C57AA /* week5_cdilly_ArchivingTests */,
+				E7A567001B2A9B14009C57AA /* week5_cdilly_SQLite */,
+				E7A5671A1B2A9B15009C57AA /* week5_cdilly_SQLiteTests */,
 				E7A566FF1B2A9B14009C57AA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E7A567001B2A9B14009C57AA /* week5_cdilly_Archiving */ = {
+		E7A567001B2A9B14009C57AA /* week5_cdilly_SQLite */ = {
 			isa = PBXGroup;
 			children = (
 				E7A567321B2AA1FE009C57AA /* Main.storyboard */,
@@ -114,6 +114,7 @@
 				E7A5672F1B2A9E72009C57AA /* SecondViewController.h */,
 				E7A567301B2A9E88009C57AA /* SecondViewController.m */,
 			);
+			name = week5_cdilly_SQLite;
 			path = week5_cdilly_Archiving;
 			sourceTree = "<group>";
 		};
@@ -126,7 +127,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E7A5671A1B2A9B15009C57AA /* week5_cdilly_ArchivingTests */ = {
+		E7A5671A1B2A9B15009C57AA /* week5_cdilly_SQLiteTests */ = {
 			isa = PBXGroup;
 			children = (
 				E7A5671D1B2A9B15009C57AA /* week5_cdilly_ArchivingTests.m */,
@@ -135,6 +136,7 @@
 				E7335D731B307C83006C1143 /* SQLiteTests.h */,
 				E7335D741B307C83006C1143 /* SQLiteTests.m */,
 			);
+			name = week5_cdilly_SQLiteTests;
 			path = week5_cdilly_ArchivingTests;
 			sourceTree = "<group>";
 		};
