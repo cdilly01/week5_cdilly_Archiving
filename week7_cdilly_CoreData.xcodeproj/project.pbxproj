@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E71730F21B374CE800BA8593 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71730F11B374CE800BA8593 /* CoreData.framework */; };
 		E71730F71B37512300BA8593 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E71730F51B37512300BA8593 /* Model.xcdatamodeld */; };
+		E71730FA1B3752E700BA8593 /* NoteSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = E71730F91B3752E700BA8593 /* NoteSvcCoreData.m */; };
 		E7335D6F1B2FEDF1006C1143 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */; };
 		E7335D721B2FEEEC006C1143 /* NoteSvcSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */; };
 		E7335D751B307C83006C1143 /* SQLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7335D741B307C83006C1143 /* SQLiteTests.m */; };
@@ -38,6 +39,8 @@
 		E71730F11B374CE800BA8593 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E71730F31B374E5800BA8593 /* CoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreData-Prefix.pch"; sourceTree = "<group>"; };
 		E71730F61B37512300BA8593 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E71730F81B3752AE00BA8593 /* NoteSvcCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteSvcCoreData.h; sourceTree = "<group>"; };
+		E71730F91B3752E700BA8593 /* NoteSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcCoreData.m; sourceTree = "<group>"; };
 		E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E7335D701B2FEEEC006C1143 /* NoteSvcSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteSvcSQLite.h; sourceTree = "<group>"; };
 		E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcSQLite.m; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				E7A567351B2AA936009C57AA /* NoteSvcArchive.m */,
 				E7335D701B2FEEEC006C1143 /* NoteSvcSQLite.h */,
 				E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */,
+				E71730F81B3752AE00BA8593 /* NoteSvcCoreData.h */,
+				E71730F91B3752E700BA8593 /* NoteSvcCoreData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A567311B2A9E88009C57AA /* SecondViewController.m in Sources */,
+				E71730FA1B3752E700BA8593 /* NoteSvcCoreData.m in Sources */,
 				E7A5670A1B2A9B14009C57AA /* ViewController.m in Sources */,
 				E7A5672E1B2A9C74009C57AA /* NoteSvcCache.m in Sources */,
 				E7A567071B2A9B14009C57AA /* AppDelegate.m in Sources */,
