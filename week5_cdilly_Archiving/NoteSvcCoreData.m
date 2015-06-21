@@ -11,6 +11,18 @@
 
 @implementation NoteSvcCoreData
 
+NSMutableArray *notesArrayCoreData = nil;
 
+-(Note *)deleteNote:(Note *)note{
+    return note;
+}
+
+- (Note *) addNote: (Note *) note {
+    return note;
+}
+
+- (NSMutableArray *) retrieveAllNotes {
+    return notesArrayCoreData;
+}
 
 @end

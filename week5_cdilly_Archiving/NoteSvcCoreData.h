@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface NoteSvcCoreData: NSObject
+#import "NoteSvc.h"
+
+@interface NoteSvcCoreData: NSObject<NoteSvc>
 
 @end
