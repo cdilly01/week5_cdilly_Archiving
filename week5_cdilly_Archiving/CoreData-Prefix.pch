@@ -1,0 +1,19 @@
+//
+//  CoreData-Prefix.pch
+//  week7_cdilly_CoreData
+//
+//  Created by A Student on 6/21/15.
+//  Copyright (c) 2015 msse650. All rights reserved.
+//
+
+#import <Availability.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+#ifndef week7_cdilly_CoreData_CoreData_Prefix_pch
+#define week7_cdilly_CoreData_CoreData_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
