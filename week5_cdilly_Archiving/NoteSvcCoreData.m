@@ -11,9 +11,13 @@
 
 @implementation NoteSvcCoreData
 
+NSManagedObjectModel *model = nil;
+NSPersistentStoreCoordinator *psc = nil;
+NSManagedObjectContext *moc = nil;
+
 NSMutableArray *notesArrayCoreData = nil;
 
--(Note *)deleteNote:(Note *)note{
+- (Note *)deleteNote:(Note *)note{
     return note;
 }
 
@@ -23,6 +27,10 @@ NSMutableArray *notesArrayCoreData = nil;
 
 - (NSMutableArray *) retrieveAllNotes {
     return notesArrayCoreData;
+}
+
+-(void) initializeCoreData{
+
 }
 
 @end
