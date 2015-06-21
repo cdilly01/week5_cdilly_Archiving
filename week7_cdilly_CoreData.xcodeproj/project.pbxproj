@@ -409,7 +409,7 @@
 				INFOPLIST_FILE = week5_cdilly_ArchivingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = week7_cdilly_CoreDataTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week6_cdilly_SQLite.app/week6_cdilly_SQLite";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week7_cdilly_CoreData.app/week7_cdilly_CoreData";
 			};
 			name = Debug;
 		};
@@ -424,7 +424,7 @@
 				INFOPLIST_FILE = week5_cdilly_ArchivingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = week7_cdilly_CoreDataTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week6_cdilly_SQLite.app/week6_cdilly_SQLite";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/week7_cdilly_CoreData.app/week7_cdilly_CoreData";
 			};
 			name = Release;
 		};

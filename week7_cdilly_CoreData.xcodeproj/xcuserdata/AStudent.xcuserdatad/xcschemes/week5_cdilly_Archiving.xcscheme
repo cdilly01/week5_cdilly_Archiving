@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-               BuildableName = "week6_cdilly_SQLite.app"
+               BuildableName = "week7_cdilly_CoreData.app"
                BlueprintName = "week7_cdilly_CoreData"
                ReferencedContainer = "container:week7_cdilly_CoreData.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7A567161B2A9B15009C57AA"
-               BuildableName = "week6_cdilly_SQLiteTests.xctest"
+               BuildableName = "week7_cdilly_CoreDataTests.xctest"
                BlueprintName = "week7_cdilly_CoreDataTests"
                ReferencedContainer = "container:week7_cdilly_CoreData.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7A567161B2A9B15009C57AA"
-               BuildableName = "week6_cdilly_SQLiteTests.xctest"
+               BuildableName = "week7_cdilly_CoreDataTests.xctest"
                BlueprintName = "week7_cdilly_CoreDataTests"
                ReferencedContainer = "container:week7_cdilly_CoreData.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-            BuildableName = "week6_cdilly_SQLite.app"
+            BuildableName = "week7_cdilly_CoreData.app"
             BlueprintName = "week7_cdilly_CoreData"
             ReferencedContainer = "container:week7_cdilly_CoreData.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-            BuildableName = "week6_cdilly_SQLite.app"
+            BuildableName = "week7_cdilly_CoreData.app"
             BlueprintName = "week7_cdilly_CoreData"
             ReferencedContainer = "container:week7_cdilly_CoreData.xcodeproj">
          </BuildableReference>
@@ -96,7 +96,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7A566FD1B2A9B14009C57AA"
-            BuildableName = "week6_cdilly_SQLite.app"
+            BuildableName = "week7_cdilly_CoreData.app"
             BlueprintName = "week7_cdilly_CoreData"
             ReferencedContainer = "container:week7_cdilly_CoreData.xcodeproj">
          </BuildableReference>
