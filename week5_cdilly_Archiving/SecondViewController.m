@@ -10,7 +10,8 @@
 #import "Note.h"
 //#import "NoteSvcCache.h"
 //#import "NoteSvcArchive.h"
-#import "NoteSvcSQLite.h"
+//#import "NoteSvcSQLite.h"
+#import "NoteSvcCoreData.h"
 
 @interface SecondViewController ()
 
@@ -19,12 +20,13 @@
 @implementation SecondViewController
 
 //NoteSvcArchive *secondNoteSvcArchive = nil;
-NoteSvcSQLite *secondNoteSvcSQLite = nil;
+//NoteSvcSQLite *secondNoteSvcSQLite = nil;
+NoteSvcCoreData *secondNoteSvcCoreData = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    secondNoteSvcSQLite = [[NoteSvcSQLite alloc] init];
+    secondNoteSvcCoreData = [[NoteSvcCoreData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +37,7 @@ NoteSvcSQLite *secondNoteSvcSQLite = nil;
 // Return the number of notes
 - (NSInteger)tableView:(UITableView *)secondTableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[secondNoteSvcSQLite retrieveAllNotes] count];
+    return [[secondNoteSvcCoreData retrieveAllNotes] count];
 }
 
 // Return the table cell for a paricular row (index)
@@ -50,7 +52,7 @@ NoteSvcSQLite *secondNoteSvcSQLite = nil;
                                       reuseIdentifier:simpleTableIdentifier];
     }
     
-    Note *note = [[secondNoteSvcSQLite retrieveAllNotes]
+    Note *note = [[secondNoteSvcCoreData retrieveAllNotes]
                   objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [note description];

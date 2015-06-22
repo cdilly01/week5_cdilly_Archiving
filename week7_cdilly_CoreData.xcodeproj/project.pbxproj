@@ -11,18 +11,13 @@
 		E71730F71B37512300BA8593 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E71730F51B37512300BA8593 /* Model.xcdatamodeld */; };
 		E71730FA1B3752E700BA8593 /* NoteSvcCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = E71730F91B3752E700BA8593 /* NoteSvcCoreData.m */; };
 		E7335D6F1B2FEDF1006C1143 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */; };
-		E7335D721B2FEEEC006C1143 /* NoteSvcSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */; };
-		E7335D751B307C83006C1143 /* SQLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7335D741B307C83006C1143 /* SQLiteTests.m */; };
 		E7A567041B2A9B14009C57AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567031B2A9B14009C57AA /* main.m */; };
 		E7A567071B2A9B14009C57AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567061B2A9B14009C57AA /* AppDelegate.m */; };
 		E7A5670A1B2A9B14009C57AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567091B2A9B14009C57AA /* ViewController.m */; };
 		E7A5670F1B2A9B14009C57AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A5670E1B2A9B14009C57AA /* Images.xcassets */; };
-		E7A5671E1B2A9B15009C57AA /* ArchivingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A5671D1B2A9B15009C57AA /* ArchivingTests.m */; };
-		E7A5672A1B2A9C29009C57AA /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567291B2A9C29009C57AA /* Note.m */; };
-		E7A5672E1B2A9C74009C57AA /* NoteSvcCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A5672D1B2A9C74009C57AA /* NoteSvcCache.m */; };
 		E7A567311B2A9E88009C57AA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567301B2A9E88009C57AA /* SecondViewController.m */; };
 		E7A567331B2AA1FE009C57AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A567321B2AA1FE009C57AA /* Main.storyboard */; };
-		E7A567361B2AA936009C57AA /* NoteSvcArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A567351B2AA936009C57AA /* NoteSvcArchive.m */; };
+		E7C9FDB21B37BF8100A1F716 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C9FDB11B37BF8100A1F716 /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +37,6 @@
 		E71730F81B3752AE00BA8593 /* NoteSvcCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteSvcCoreData.h; sourceTree = "<group>"; };
 		E71730F91B3752E700BA8593 /* NoteSvcCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcCoreData.m; sourceTree = "<group>"; };
 		E7335D6E1B2FEDF1006C1143 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		E7335D701B2FEEEC006C1143 /* NoteSvcSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteSvcSQLite.h; sourceTree = "<group>"; };
-		E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcSQLite.m; sourceTree = "<group>"; };
-		E7335D731B307C83006C1143 /* SQLiteTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteTests.h; sourceTree = "<group>"; };
-		E7335D741B307C83006C1143 /* SQLiteTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteTests.m; sourceTree = "<group>"; };
 		E7A566FE1B2A9B14009C57AA /* week7_cdilly_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week7_cdilly_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A567021B2A9B14009C57AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A567031B2A9B14009C57AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,18 +47,12 @@
 		E7A5670E1B2A9B14009C57AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E7A567171B2A9B15009C57AA /* week7_cdilly_CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week7_cdilly_CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A5671C1B2A9B15009C57AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7A5671D1B2A9B15009C57AA /* ArchivingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchivingTests.m; sourceTree = "<group>"; };
 		E7A567281B2A9C07009C57AA /* NoteSvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteSvc.h; sourceTree = "<group>"; };
-		E7A567291B2A9C29009C57AA /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		E7A5672B1B2A9C3A009C57AA /* Note.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		E7A5672C1B2A9C51009C57AA /* NoteSvcCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoteSvcCache.h; sourceTree = "<group>"; };
-		E7A5672D1B2A9C74009C57AA /* NoteSvcCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcCache.m; sourceTree = "<group>"; };
 		E7A5672F1B2A9E72009C57AA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		E7A567301B2A9E88009C57AA /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E7A567321B2AA1FE009C57AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E7A567341B2AA936009C57AA /* NoteSvcArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteSvcArchive.h; sourceTree = "<group>"; };
-		E7A567351B2AA936009C57AA /* NoteSvcArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteSvcArchive.m; sourceTree = "<group>"; };
-		E7A567371B2AAF3F009C57AA /* ArchivingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchivingTests.h; sourceTree = "<group>"; };
+		E7C9FDB01B37BF8100A1F716 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		E7C9FDB11B37BF8100A1F716 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,11 +127,7 @@
 		E7A5671A1B2A9B15009C57AA /* week7_cdilly_CoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7A5671D1B2A9B15009C57AA /* ArchivingTests.m */,
 				E7A5671B1B2A9B15009C57AA /* Supporting Files */,
-				E7A567371B2AAF3F009C57AA /* ArchivingTests.h */,
-				E7335D731B307C83006C1143 /* SQLiteTests.h */,
-				E7335D741B307C83006C1143 /* SQLiteTests.m */,
 			);
 			name = week7_cdilly_CoreDataTests;
 			path = week5_cdilly_ArchivingTests;
@@ -163,15 +144,9 @@
 		E7A567271B2A9B2F009C57AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9FDB01B37BF8100A1F716 /* Note.h */,
+				E7C9FDB11B37BF8100A1F716 /* Note.m */,
 				E7A567281B2A9C07009C57AA /* NoteSvc.h */,
-				E7A567291B2A9C29009C57AA /* Note.m */,
-				E7A5672B1B2A9C3A009C57AA /* Note.h */,
-				E7A5672C1B2A9C51009C57AA /* NoteSvcCache.h */,
-				E7A5672D1B2A9C74009C57AA /* NoteSvcCache.m */,
-				E7A567341B2AA936009C57AA /* NoteSvcArchive.h */,
-				E7A567351B2AA936009C57AA /* NoteSvcArchive.m */,
-				E7335D701B2FEEEC006C1143 /* NoteSvcSQLite.h */,
-				E7335D711B2FEEEC006C1143 /* NoteSvcSQLite.m */,
 				E71730F81B3752AE00BA8593 /* NoteSvcCoreData.h */,
 				E71730F91B3752E700BA8593 /* NoteSvcCoreData.m */,
 			);
@@ -280,13 +255,10 @@
 				E7A567311B2A9E88009C57AA /* SecondViewController.m in Sources */,
 				E71730FA1B3752E700BA8593 /* NoteSvcCoreData.m in Sources */,
 				E7A5670A1B2A9B14009C57AA /* ViewController.m in Sources */,
-				E7A5672E1B2A9C74009C57AA /* NoteSvcCache.m in Sources */,
 				E7A567071B2A9B14009C57AA /* AppDelegate.m in Sources */,
 				E7A567041B2A9B14009C57AA /* main.m in Sources */,
+				E7C9FDB21B37BF8100A1F716 /* Note.m in Sources */,
 				E71730F71B37512300BA8593 /* Model.xcdatamodeld in Sources */,
-				E7A567361B2AA936009C57AA /* NoteSvcArchive.m in Sources */,
-				E7335D721B2FEEEC006C1143 /* NoteSvcSQLite.m in Sources */,
-				E7A5672A1B2A9C29009C57AA /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,8 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7A5671E1B2A9B15009C57AA /* ArchivingTests.m in Sources */,
-				E7335D751B307C83006C1143 /* SQLiteTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
