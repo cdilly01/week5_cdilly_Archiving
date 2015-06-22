@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 msse650. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "NoteSvcCoreData.h"
+#import "CoreData-Prefix.pch"
 
 @implementation NoteSvcCoreData
 
@@ -17,7 +17,7 @@ NSManagedObjectContext *moc = nil;
 
 NSMutableArray *notesArrayCoreData = nil;
 
-- (Note *)deleteNote:(Note *)note{
+- (Note *) deleteNote:(Note *)note{
     return note;
 }
 
@@ -30,7 +30,24 @@ NSMutableArray *notesArrayCoreData = nil;
 }
 
 -(void) initializeCoreData{
-
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    model = [[NSManagedObjectModel alloc] initWithContentsOfURL: modelURL];
+    
+    NSURL *applicationDocumentsDirectory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    
+    NSURL *storeURL = [applicationDocumentsDirectory URLByAppendingPathComponent:@"week7_cdilly_CoreData.sqlite"];
+    NSError *error = nil;
+    psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    
+    if ([psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    {
+        moc = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        [moc setPersistentStoreCoordinator:psc];
+    }
+    else
+    {
+        NSLog(@"initializeCoreData FAILED with error : %@", error);
+    }
 }
 
 @end
