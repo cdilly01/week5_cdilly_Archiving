@@ -17,6 +17,14 @@ NSManagedObjectContext *moc = nil;
 
 NSMutableArray *notesArrayCoreData = nil;
 
+-(id) init {
+    if (self = [super init]) {
+        [self initializeCoreData];
+        return self;
+    }
+    return nil;
+}
+
 - (Note *) deleteNote:(Note *)note{
     return note;
 }
