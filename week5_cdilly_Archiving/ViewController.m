@@ -22,6 +22,7 @@
 //NoteSvcArchive *noteSvcArchive = nil;
 //NoteSvcSQLite *noteSvcSQLite = nil;
 NoteSvcCoreData *noteSvcCoreData = nil;
+NSManagedObjectContext *mocViewNote = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,10 +43,11 @@ NoteSvcCoreData *noteSvcCoreData = nil;
         NSLog(@"addNote");
         
         // instantiate new note with sender note
-        Note *note = [[Note alloc] init];
+        Note *note =[NSEntityDescription insertNewObjectForEntityForName:@"Note" inManagedObjectContext:mocViewNote];
         note.noteText = _noteInputText.text;
-    
-        [noteSvcCoreData addNote:note];
+        
+        
+        [noteSvcCoreData createNote: note];
     
         [self.tableView reloadData];
         NSLog(@"saveNote: note saved");

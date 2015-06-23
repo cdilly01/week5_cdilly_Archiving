@@ -11,9 +11,10 @@
 
 @protocol NoteSvc <NSObject>
 
+-(Note *) createNote: (Note *) note;
 -(Note *) addNote: (Note *) note;
 -(Note *) deleteNote: (Note *) note;
 
--(NSMutableArray *) retrieveAllNotes;
+-(NSArray *) retrieveAllNotes;
 
 @end
